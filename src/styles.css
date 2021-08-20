@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-    background-image: url(./assets/qoutes-bg.jpeg);
+    background-image: url(./assets/quotes-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

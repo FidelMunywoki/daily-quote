@@ -1,32 +1,38 @@
 
 <div class="container text-white mt-5">
     <div class="">
-        <h1 class="text-center text-warning display-3 p-4 ">Daily Qoute | Stay Motivated</h1>
+        <h1 class="text-center text-warning display-4 p-4 ">Daily Qoute | Stay Motivated</h1>
+        <hr>
     </div>
-    <hr>
-    <div class="col-md-6">
-        <ul>
-        <li *ngFor = 'let quote of quotes'>
-            <div class="card">
-                <div class="card-header">
-                Quote
+    <div class="row">
+        <div class="col-md-6">
+            
+            <div *ngFor = 'let quote of quotes; let i = index'>
+                <div class="card mb-4">
+                    <div class="card-header">
+                    Quote
+                    </div>
+                    <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="text-black">{{quote.quoteDescription}}</p>
+                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                    </div>
+                    <div>
+                        <button class="m-2 bg-warning btn" (click)='toggleDetails(i)'>View Author</button>
+                    </div>
+                    <div class="text-black ms-2">
+                        <app-quote-detail *ngIf='quote.showAuthorName' [quote] = 'quote'></app-quote-detail>
+                    </div>
                 </div>
-                <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p class="text-black">{{quote.quoteDescription}}</p>
-                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-                </div>
-            </div>
-            <div>
                 
-                <app-quote-detail [quote] = 'quote'></app-quote-detail>
-
+        
             </div>
-    
-        </li>
-        </ul>
+            
+        </div>
+
     </div>
+   
   
   </div>
   

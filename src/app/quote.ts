@@ -13,9 +13,9 @@ export class Quote {
         this.authorName = authorName;
         this.quoteDescription = quoteDescription;
         this.postedBy = postedBy;
-       this.showAuthorName = false;
-       this.upVotes = 0;
-       this.downVotes = 0;
+        this.showAuthorName = false;
+        this.upVotes = 0;
+        this.downVotes = 0;
     }
 }
 

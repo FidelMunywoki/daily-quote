@@ -19,6 +19,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showAuthorName = !this.quotes[index].showAuthorName;
   }
 
+  addNewQuote(quote: Quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.postedDate = new Date(quote.postedDate)
+    this.quotes.push(quote)
+  }
+
   deleteQuote(isComplete: boolean, index: number){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete this Quote by ${this.quotes[index].authorName}?`)

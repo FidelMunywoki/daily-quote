@@ -9,14 +9,23 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote (1, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela"),
-    new Quote (2, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela"),
-    new Quote (3, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela"),
+    new Quote (1, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela","F Munywoki", new Date(2019,9,1)),
+    new Quote (2, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela", "Martin Younger", new Date(2020,11,23)),
+    new Quote (3, "A winner is a dreamer who never gives up. Education is the most powerful weapon which you can use to change the world.", "Nelson Mandela", "Trevor Spencer", new Date(2021,2,20)),
     
   ];
 
   toggleDetails(index: number) {
     this.quotes[index].showAuthorName = !this.quotes[index].showAuthorName;
+  }
+
+  deleteQuote(isComplete: boolean, index: number){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete this Quote by ${this.quotes[index].authorName}?`)
+      if (toDelete) {
+        this.quotes.splice(index,1);
+      }
+    }
   }
 
   constructor() { }

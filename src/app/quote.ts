@@ -4,6 +4,8 @@ export class Quote {
     quoteDescription: string;
     postedBy: string;
     showAuthorName: boolean;
+    upVotes:number;
+    downVotes: number;
 
 
     constructor (id:number, quoteDescription:string, authorName:string, postedBy:string, public postedDate: Date) {
@@ -12,6 +14,8 @@ export class Quote {
         this.quoteDescription = quoteDescription;
         this.postedBy = postedBy;
        this.showAuthorName = false;
+       this.upVotes = 0;
+       this.downVotes = 0;
     }
 }
 

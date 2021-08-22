@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 [FidelMunywoki](https://github.com/FidelMunywoki)
 
 ### Version
-08.2020/01.0
+08.2021/01.0
 
 ## Description
 
@@ -21,7 +21,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Live Page 
 
-Edit
+ https://fidelmunywoki.github.io/daily-quote/
 
 ## Screen Shot
 ![Image of Yaktocat](src/assets/quotes-screenshot.png)
@@ -35,11 +35,11 @@ Edit
 
 ## Technologies Used
 
-* [HTML5]
-* [CSS]
-* [Bootstrap5]
-* [Javascript]
-* [AngularJs]
+* HTML5
+* CSS
+* Bootstrap5
+* Javascript
+* AngularJ]
 
 ## Known Bugs
 
